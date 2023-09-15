@@ -1,4 +1,7 @@
 import app from "./app.js";
+import { connectDb } from "./config/database.js";
+
+connectDb();
 
 
 
