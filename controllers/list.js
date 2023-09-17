@@ -13,14 +13,15 @@ export const fetchList = asyncError(async (req, res, next) => {
 
 export const createTodo = asyncError(async (req, res, next) => {
 
-    const { message } = req.body
+    const  message  = req.body
 
-    const messageCreate = { message }
 
-    await List.create(messageCreate)
+
+    const res = await List.create({message})
 
     res.status(200).json({
         success: true,
+        res
     })
 })
 
